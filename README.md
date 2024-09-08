@@ -23,34 +23,28 @@ waste_classification/
 │   └── R/                                             # Recyclable test images
 ├── waste_classification.py                            # Model training and evaluation script
 └── README.md                                          # Project documentation
+
 Requirements
 Install the necessary libraries using the following command:
+  pip install -r requirements.txt
 
-bash
-Copy code
-pip install -r requirements.txt
 requirements.txt:
-
-Copy code
-tensorflow
-numpy
-Pillow
+  tensorflow
+  numpy
+  Pillow
 How to Run the Project
 Train the Model: The script waste_classification.py contains the code for training the CNN model on the dataset.
 
 Run the script to train the model:
+  python waste_classification.py
 
-bash
-Copy code
-python waste_classification.py
 Evaluate the Model: After training, the model is evaluated on the test dataset. You can monitor accuracy and loss during training.
 
 Predict Waste Type: Use the following code to predict the waste type from an image:
 
-python
-Copy code
-waste_type, confidence = predict_waste_type('path_to_image.jpg')
-print(f'Predicted Waste Type: {waste_type}, Confidence: {confidence}')
+  waste_type, confidence = predict_waste_type('path_to_image.jpg')
+  print(f'Predicted Waste Type: {waste_type}, Confidence: {confidence}')
+  
 Model Summary
 Model Type: CNN (Convolutional Neural Network)
 Input Shape: (150, 150, 3)
@@ -59,6 +53,4 @@ Optimizer: Adam
 Loss Function: Categorical Crossentropy
 Evaluation Metric: Accuracy
 Example Prediction
-bash
-Copy code
-Predicted Waste Type: Organic with confidence: 96.47%
+  Predicted Waste Type: Organic with confidence: 96.47%
